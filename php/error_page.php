@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/online-voting.png">
+    <link rel="icon" href="../images/online-voting.png">
     <title>Error</title>
     <style>
         * {
@@ -69,7 +69,7 @@
     <script>
         // Redirect to login page after 5 seconds
         setTimeout(function() {
-            window.location.href = "login.html"; // Change to your login page
+            window.location.href = "../htmll/login.html"; // Change to your login page
         }, 5000); // 5000 milliseconds = 5 seconds
     </script>
 </head>
@@ -87,7 +87,7 @@ if (isset($_GET['message'])) {
     <h2>Error</h2>
     <p><?php echo htmlspecialchars($error_message); ?></p>
     <p>You will be redirected to the login page in <span id="countdown">5</span> seconds.</p>
-    <p>If you are not redirected, <a href="login.html">click here</a>.</p>
+    <p>If you are not redirected, <a href="../htmll/login.html">click here</a>.</p>
 </div>
 
 <script>

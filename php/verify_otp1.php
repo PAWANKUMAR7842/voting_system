@@ -23,10 +23,10 @@ $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     $_SESSION['email'] = $email; 
-    header("Location: vote.php");
+    header("Location: ../php/vote.php");
     exit();
 } else {
-    echo "<script>alert('Invalid or Expired OTP! Try Again.'); window.location.href='verify_otp.php?email=$email';</script>";
+    echo "<script>alert('Invalid or Expired OTP! Try Again.'); window.location.href='../php/verify_otp.php?email=$email';</script>";
 }
 
 $conn->close();

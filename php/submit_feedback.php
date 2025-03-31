@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         // Redirect to a thank you page or display a success message
-        header("Location: feedthank.html");
+        header("Location: ../htmll/feedthank.html");
         exit();
     } else {
         echo "Error: " . $stmt->error;

@@ -39,7 +39,7 @@ $candidateVotesResult = $conn->query($candidateVotesQuery);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="icon" href="./images/online-voting.png">
+    <link rel="icon" href="../images/online-voting.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -59,7 +59,7 @@ $candidateVotesResult = $conn->query($candidateVotesQuery);
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow: hidden;
+            
         }
 
    
@@ -231,13 +231,13 @@ nav ul li {
 </head>
 <body class="feedback-body">
     <nav>
-        <img src="./images/gif.gif" class="logo" alt="Logo" title="E-voting">
+        <img src="../images/gif.gif" class="logo" alt="Logo" title="E-voting">
         <ul class="navbar">
             <li>
-                <a href="./login.html">Home</a>
-                <a href="./admin_login.html">Admin</a>
-                <a href="./feedback.html">Feedback</a>
-                <a href="logout.php">Logout</a>
+            <a href="../htmll/login.html">Home</a>
+                <a href="../htmll/admin_login.html">Admin</a>
+                <a href="../htmll/feedback.html">Feedback</a>
+                <a href="../php/logout.php">Logout</a>
             </li>
         </ul>
     </nav>
@@ -277,8 +277,8 @@ nav ul li {
             <?php endwhile; ?>
         </table>
 
-        <a href="reset_votes.php"><button class="btn">Reset Voting</button></a>
-        <a href="logout.php"><button class="btn logout-btn">Logout</button></a>
+        <a href="../php/reset_votes.php"><button class="btn">Reset Voting</button></a>
+        <a href="../php/logout.php"><button class="btn logout-btn">Logout</button></a>
     </div>
 </body>
 </html>

@@ -58,7 +58,7 @@ if ($result->num_rows > 0) {
 
     $stmt->bind_param("ss", $email, $candidate);
     if ($stmt->execute()) {
-        echo "<script>alert('Vote successfully submitted!'); window.location.href='thank_you.html';</script>";
+        echo "<script>alert('Vote successfully submitted!'); window.location.href='../htmll/thank_you.html';</script>";
     } else {
         die("Execution Error: " . $stmt->error); // Print execution error
     }

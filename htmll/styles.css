@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
-    <link rel="icon" href="./images/online-voting.png">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <style>
-       * {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -22,9 +8,59 @@
     scroll-behavior: smooth;
 }
 
-/* Body and Background */
-body {
-    background-image: url('./images/final.jpeg');
+/* Navigation Bar */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #1a1a2e; /* Dark blue color */
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    z-index: 1000;
+}
+
+nav .logo {
+    width: 60px;
+    border-radius: 35px;
+    position: relative;
+    right: 35px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 4vh;
+}
+
+.navbar a {
+    color: #eaeaea; /* Light gray text */
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: ease 0.40s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: #0f3460; /* Darker blue for hover */
+    color: #ffffff; /* White text on hover */
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+/* Form Section */
+.main {
+    background-image: url('../images/final.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -35,10 +71,17 @@ body {
     align-items: center;
 }
 
-/* Login Container */
-.login-container {
+
+.container {
+    position: relative;
+    right: 300px;
     width: 100%;
     max-width: 400px;
+    padding: 20px;
+}
+
+.login {
+    width: 100%;
     padding: 30px;
     background: rgba(26, 26, 46, 0.9); /* Semi-transparent dark blue */
     border: 1px solid #eee;
@@ -48,14 +91,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.login-container:hover {
+.login:hover {
     border-radius: 4px;
     box-shadow: 0px 0px 0 #666;
     background: rgba(15, 52, 96, 0.9); /* Darker blue on hover */
     opacity: 0.9;
 }
 
-h2 {
+h1 {
     font-size: 30px;
     margin: 20px 0;
     color: #eaeaea; /* Light gray text */
@@ -64,7 +107,7 @@ h2 {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="email"] {
     width: 100%;
     margin-bottom: 15px;
     font-size: 15px;
@@ -76,7 +119,7 @@ input[type="password"] {
     color: #333; /* Dark text */
 }
 
-button[type="submit"] {
+.login-btn {
     width: 100%;
     font-size: 18px;
     font-weight: bold;
@@ -89,7 +132,7 @@ button[type="submit"] {
     transition: all 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.login-btn:hover {
     background: #1a1a2e; /* Darker blue on hover */
     border: 2px solid #0f3460;
     box-shadow: inset 0 1px 2px rgba(27, 27, 27, 0.1);
@@ -97,65 +140,57 @@ button[type="submit"]:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .login-container {
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .login {
         padding: 20px;
     }
 
-    h2 {
+    h1 {
         font-size: 24px;
     }
 
     input[type="text"],
-    input[type="password"] {
+    input[type="email"] {
         font-size: 14px;
     }
 
-    button[type="submit"] {
+    .login-btn {
         font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .login-container {
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .login {
         padding: 15px;
     }
 
-    h2 {
+    h1 {
         font-size: 20px;
     }
 
     input[type="text"],
-    input[type="password"] {
+    input[type="email"] {
         font-size: 12px;
     }
 
-    button[type="submit"] {
+    .login-btn {
         font-size: 14px;
     }
 }
-
-  </style>
-</head>
-<body class="feedback-body">
-    <nav>
-        <img src="./images/gif.gif" class="logo" alt="Logo" title="E-voting">
-        <ul class="navbar">
-            <li>
-                <a href="./login.html">Home</a>
-                <a href="./admin_login.html">Admin</a>
-                <a href="./feedback.html">Feedback</a>
-                <a href="logout.php">Logout</a>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="login-container">
-        <h2>Admin Login</h2>
-        <form action="./admin_login.php" method="post">
-            <input type="text" name="username" placeholder="Admin Username" required>
-            <input type="password" name="password" placeholder="Admin Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-</body>
-</html>

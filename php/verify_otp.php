@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verift OTP</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./images/online-voting.png">
+    <link rel="stylesheet" href="../htmll/styles.css">
+    <link rel="icon" href="../images/online-voting.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
 
         /* Body and Background */
         body {
-            background-image: url('./images/final.jpeg');
+            background-image: url('../images/final.jpeg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -147,13 +147,13 @@
 </head>
 <body class="feedback-body">
     <nav>
-        <img src="./images/gif.gif" class="logo" alt="Logo" title="E-voting">
+        <img src="../images/gif.gif" class="logo" alt="Logo" title="E-voting">
         <ul class="navbar">
             <li>
-                <a href="./login.html">Home</a>
-                <a href="./admin_login.html">Admin</a>
-                <a href="./feedback.html">Feedback</a>
-                <a href="logout.php">Logout</a>
+            <a href="../htmll/login.html">Home</a>
+                <a href="../htmll/admin_login.html">Admin</a>
+                <a href="../htmll/feedback.html">Feedback</a>
+                <a href="../php/logout.php">Logout</a>
             </li>
         </ul>
     </nav>
@@ -164,13 +164,13 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
 <div class="container">
     <h2>Verify OTP</h2>
-    <form action="verify_otp1.php" method="post">
+    <form action="../php/verify_otp1.php" method="post">
         <input type="email" name="email" value="<?php echo htmlspecialchars($email); ?>" readonly>
         <input type="text" name="otp" placeholder="Enter OTP" required>
         <button type="submit">Verify OTP</button>
     </form>
     <br>
-    <form action="resend_otp.php" method="post">
+    <form action="../php/resend_otp.php" method="post">
         <input type="hidden" name="email" value="<?php echo htmlspecialchars($email); ?>">
         <button type="submit" class="resend">Resend OTP</button>
     </form>

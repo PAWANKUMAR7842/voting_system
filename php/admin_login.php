@@ -8,10 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Hardcoded admin credentials
     if ($username === "admin" && $password === "admin123") {
         $_SESSION['admin_logged_in'] = true;
-        header("Location: admin_dashboard.php");
+        header("Location: ../php/admin_dashboard.php");
         exit();
     } else {
-        echo "<script>alert('Invalid Credentials!'); window.location='admin_login.html';</script>";
+        echo "<script>alert('Invalid Credentials!'); window.location='../htmll/admin_login.html';</script>";
     }
 }
 ?>

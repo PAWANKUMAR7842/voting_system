@@ -1,1 +1,25 @@
-.qodo
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore Composer dependencies
+vendor/
+
+# Ignore Composer lock file
+composer.lock
+
+# Ignore sensitive config files
+.env
+config.php
+
+# Ignore sensitive PHP files
+login1.php
+resend_otp.php
+
+# Ignore logs and cache
+*.log
+cache/

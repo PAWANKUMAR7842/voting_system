@@ -24,8 +24,8 @@ $candidatesResult = $conn->query($candidatesQuery);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting Page</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./images/online-voting.png">
+    <link rel="stylesheet" href="../htmll/styles.css">
+    <link rel="icon" href="../images/online-voting.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@ $candidatesResult = $conn->query($candidatesQuery);
 
         /* Body and Background */
         body {
-            background-image: url('./images/final.jpeg');/* High-quality voting-themed background */
+            background-image: url('../images/final.jpeg');/* High-quality voting-themed background */
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -187,18 +187,18 @@ $candidatesResult = $conn->query($candidatesQuery);
 </head>
 <body class="feedback-body">
     <nav>
-        <img src="./images/gif.gif" class="logo" alt="Logo" title="E-voting">
+        <img src="../images/gif.gif" class="logo" alt="Logo" title="E-voting">
         <ul class="navbar">
             <li>
-                <a href="./login.html">Home</a>
-                <a href="./admin_login.html">Admin</a>
-                <a href="./feedback.html">Feedback</a>
-                <a href="logout.php">Logout</a>
+            <a href="../htmll/login.html">Home</a>
+                <a href="../htmll/admin_login.html">Admin</a>
+                <a href="../htmll/feedback.html">Feedback</a>
+                <a href="../php/logout.php">Logout</a>
             </li>
         </ul>
     </nav>
   
-            <img src="./images/votegif.gif" class="hello" alt="Logo" title="E-voting">  
+            <img src="../images/votegif.gif" class="hello" alt="Logo" title="E-voting">  
           
     
 
@@ -206,7 +206,7 @@ $candidatesResult = $conn->query($candidatesQuery);
         <h2>Welcome to the Voting Page</h2>
         <p>Select your candidate below:</p>
 
-        <form action="submit_vote.php" method="POST">
+        <form action="../php/submit_vote.php" method="POST">
             <input type="hidden" name="email" value="<?php echo $email; ?>">
 
             <?php

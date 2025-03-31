@@ -13,6 +13,6 @@ if ($conn->connect_error) {
 $conn->query("DELETE FROM votes");
 
 $conn->close();
-header("Location: admin_dashboard.php");
+header("Location: ../php/admin_dashboard.php");
 exit();
 ?>
