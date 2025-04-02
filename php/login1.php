@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . '/vendor/autoload.php'; // Load PHPMailer
+require __DIR__ . '/../vendor/autoload.php';
 
 // Database connection
 $conn = new mysqli("localhost", "root", "", "vote");
