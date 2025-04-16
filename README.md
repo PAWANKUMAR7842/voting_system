@@ -36,6 +36,7 @@ Copy the **voting_system** folder into `C:\xampp\htdocs\`
 - Open **phpMyAdmin** (`http://localhost/phpmyadmin/`)
 - Create a new database: `vote`
 - Click **Import**, select `sql/data.sql` from the project folder, and upload
+- "While importing the data.sql file into phpMyAdmin. In that file, insert the details of the students who are allowed to vote, or include the complete list of students from your class."
 
 ### 6. Install Composer & PHPMailer (for OTPs)
 - Install Composer from: [https://getcomposer.org/download/](https://getcomposer.org/download/)
